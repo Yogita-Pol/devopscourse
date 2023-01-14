@@ -1,6 +1,7 @@
 FROM python:3.8-slim-buster
 
 WORKDIR /app
+RUN wget google.com
 
 COPY requirements.txt requirements.txt
 #RUN pip install -r requirements.txt
