@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN  apt-get update
 RUN  apt-get upgrade
-RUN  apt install python3-pip
+#RUN  apt install python3-pip
 #RUN wget google.com
 #RUN apt-get install update
 
