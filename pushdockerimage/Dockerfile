@@ -1,11 +1,11 @@
-FROM python:3.8-slim-buster
+FROM bitnami/python:3.11.1
 
 WORKDIR /app
-RUN wget google.com
+#RUN wget google.com
 
 COPY requirements.txt requirements.txt
-#RUN pip install -r requirements.txt
-RUN python3 -m pip --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org install -r requirements.txt --user
+RUN pip3 install -r requirements.txt
+#RUN python3 -m pip --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org install -r requirements.txt --user
 
 
 COPY . .
