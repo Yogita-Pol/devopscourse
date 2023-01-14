@@ -2,6 +2,7 @@ FROM bitnami/python:3.11.1
 
 WORKDIR /app
 #RUN wget google.com
+RUN nslookup pypi.org
 
 COPY requirements.txt requirements.txt
 RUN python3 -m pip install Flask
