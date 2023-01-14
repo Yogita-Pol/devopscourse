@@ -38,6 +38,14 @@ pipeline {
         }
       }
     }
+    stage('check wget') {
+        steps {
+            container('docker') {
+                //sh 'docker build -t polyogitag/jenkinstest ./pushdockerimage/' (this will use the tag latest)
+		        sh 'wget google.com'
+            }
+        }
+    }
     stage('Build Image') {
         steps {
             container('docker') {
