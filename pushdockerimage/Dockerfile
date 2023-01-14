@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt requirements.txt
 #RUN pip install -r requirements.txt
-RUN python3 -m pip install -r requirements.txt
+RUN python3 -m pip --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org install -r requirements.txt --user
 
 
 COPY . .
