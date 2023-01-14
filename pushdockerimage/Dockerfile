@@ -1,6 +1,10 @@
 FROM bitnami/python:3.11.1
 
 WORKDIR /app
+
+RUN  apt-get update
+RUN  apt-get upgrade
+RUN  apt install python3-pip
 #RUN wget google.com
 #RUN apt-get install update
 
